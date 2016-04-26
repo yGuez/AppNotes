@@ -1,0 +1,3 @@
+[2016-04-26 10:58:23] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost/synfony/Katapult/web/"} []
+[2016-04-26 10:58:23] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-04-26 10:58:23] request.CRITICAL: Uncaught PHP Exception InvalidArgumentException: "Class "AppBundle\Controller\DefaultController" does not exist." at C:\wamp\www\synfony\Katapult\app\cache\prod\classes.php line 2711 {"exception":"[object] (InvalidArgumentException(code: 0): Class \"AppBundle\\Controller\\DefaultController\" does not exist. at C:\\wamp\\www\\synfony\\Katapult\\app\\cache\\prod\\classes.php:2711)"} []

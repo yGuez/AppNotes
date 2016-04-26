@@ -1,0 +1,8 @@
+kp_platform:
+    resource: "@KPPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
+
+
+
+

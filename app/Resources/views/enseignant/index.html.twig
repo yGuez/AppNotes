@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Enseignant list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        <div class="well">
+            {{ form(form) }}
+        </div>
+        </tbody>
+    </table>
+
+    
+{% endblock %}
