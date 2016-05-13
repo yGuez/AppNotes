@@ -103,3 +103,17 @@ ea3b58,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseig
 bd7fcc,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/show,1461682278,,200
 e28709,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1461682284,,200
 4682be,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1461694001,,200
+94e8d6,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1461701687,,200
+bed0d1,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1463128234,,200
+e04eb1,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/enseignant/,1463128944,08d6d6,200
+08d6d6,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/enseignant/,1463128944,,404
+67b3b5,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/,1463128953,53f0fa,200
+53f0fa,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/,1463128953,,404
+24fe7e,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/,1463129752,a39b08,200
+a39b08,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/,1463129752,,404
+eced99,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/,1463129817,a49fc1,200
+a49fc1,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/,1463129817,,404
+d8ab8f,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1463129845,,200
+c3b1fa,::1,POST,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1463129853,,302
+6c8866,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/show,1463129854,,200
+1e6f10,::1,GET,http://localhost/synfony/Katapult/web/app_dev.php/platform/enseignant/add,1463129866,,200
