@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class EtudiantType extends AbstractType
+class SessionType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,9 @@ class EtudiantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('string')
-            ->add('prenom')
-            ->add('numeroEtudiant')
-            ->add('save', 'submit')
+            ->add('titre')
+            ->add('dateDebut', 'datetime')
+            ->add('dateFin', 'datetime')
         ;
     }
     
@@ -28,7 +27,7 @@ class EtudiantType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'KP\PlatformBundle\Entity\Etudiant'
+            'data_class' => 'KP\PlatformBundle\Entity\Session'
         ));
     }
 }

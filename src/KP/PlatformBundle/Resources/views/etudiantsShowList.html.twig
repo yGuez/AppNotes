@@ -1,0 +1,14 @@
+{% if app.session.flashBag.has('success') %}
+    <div class="alert alert-success">
+        {% for msg in app.session.flashBag.get('success') %}
+            {{ msg }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<p><a href="{{ path('platform_etudiants_add') }}">Ajouter un enseigant</a></p>
+<p>
+    {% for etudiant in etudiants %}
+        {{ etudiant.string }} {{ etudiant.prenom }}<br />
+    {% endfor %}
+</p>

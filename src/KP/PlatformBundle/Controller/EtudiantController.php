@@ -30,12 +30,12 @@ class EtudiantController extends Controller
         //return $this->render('KPPlatformBundle::enseignants.html.twig', array(
         //'form' => $form->createView()
         //));
-        $enseignant = new Etudiant();
-        $form = $this->get('form.factory')->create(new EtudiantType(), $enseignant);
+        $etudiant = new Etudiant();
+        $form = $this->get('form.factory')->create(new EtudiantType(), $etudiant);
 
         if ($form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($enseignant);
+            $em->persist($etudiant);
             $em->flush();
 
             $request->getSession()
@@ -66,7 +66,7 @@ class EtudiantController extends Controller
     public function showAction(Request $request, Etudiant $etudiant)
     {
 //        $em = $this->getDoctrine()->getManager();
-//        $enseignant = $em->getRepository('KPPlatformBundle:Enseignant')->find($id);
+//        $etudiants = $em->getRepository('KPPlatformBundle:Etudiant')->find($id);
 
         return $this->render('KPPlatformBundle::etudiantsShow.html.twig', array('etudiant' => $etudiant));
     }
