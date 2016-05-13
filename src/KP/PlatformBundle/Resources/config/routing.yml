@@ -3,6 +3,10 @@ platform_enseignants_add:
     path:    /enseignant/add
     defaults: { _controller: KPPlatformBundle:Enseignant:add }
 
-platform_enseignants_show:
+platform_enseignants_show_list:
     path:    /enseignant/show
+    defaults: { _controller: KPPlatformBundle:Enseignant:showList }
+
+platform_enseignants_show:
+    path:    /enseignant/show/{id}
     defaults: { _controller: KPPlatformBundle:Enseignant:show }

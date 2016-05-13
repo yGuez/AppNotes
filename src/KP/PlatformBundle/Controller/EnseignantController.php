@@ -59,7 +59,7 @@ class EnseignantController extends Controller
                 ->add('success', 'Vous avez ajoutez un nouveau Enseignant !')
             ;
 
-            return $this->redirect($this->generateUrl('platform_enseignants_show'));
+            return $this->redirect($this->generateUrl('platform_enseignants_show_list'));
 
         }
 
@@ -68,17 +68,23 @@ class EnseignantController extends Controller
         ));
     }
 
-    public function showAction(Request $request)
+    public function showListAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $enseignants = $em->getRepository('KPPlatformBundle:Enseignant')->getAll();
 
-
-
-        return $this->render('KPPlatformBundle::enseignantsShow.html.twig', array(
+        return $this->render('KPPlatformBundle::enseignantsShowList.html.twig', array(
             'enseignants' => $enseignants,
         ));
+    }
+
+    public function showAction(Request $request, Enseignant $enseignant)
+    {
+//        $em = $this->getDoctrine()->getManager();
+//        $enseignant = $em->getRepository('KPPlatformBundle:Enseignant')->find($id);
+        
+        return $this->render('KPPlatformBundle::enseignantsShow.html.twig', array('enseignant' => $enseignant));
     }
 
 

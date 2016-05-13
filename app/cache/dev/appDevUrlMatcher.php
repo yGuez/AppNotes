@@ -111,9 +111,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::addAction',  '_route' => 'platform_enseignants_add',);
             }
 
-            // platform_enseignants_show
-            if ($pathinfo === '/platform/enseignant/show') {
-                return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showAction',  '_route' => 'platform_enseignants_show',);
+            if (0 === strpos($pathinfo, '/platform/enseignant/show')) {
+                // platform_enseignants_show_list
+                if ($pathinfo === '/platform/enseignant/show') {
+                    return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showListAction',  '_route' => 'platform_enseignants_show_list',);
+                }
+
+                // platform_enseignants_show
+                if (preg_match('#^/platform/enseignant/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'platform_enseignants_show')), array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showAction',));
+                }
+
             }
 
         }
