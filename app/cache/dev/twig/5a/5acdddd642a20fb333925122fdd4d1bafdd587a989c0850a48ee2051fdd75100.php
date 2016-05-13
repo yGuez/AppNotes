@@ -7,26 +7,50 @@ class __TwigTemplate_cac900c5ebd08329594d46ced601b8475d5a11c2654849a337ce22c0366
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("KPPlatformBundle::index.html.twig", "KPPlatformBundle::sessions.html.twig", 1);
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "KPPlatformBundle::index.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_79842b2e5f15c40625064732545a53b7b884e3c1e920408cda2daba817502a22 = $this->env->getExtension("native_profiler");
-        $__internal_79842b2e5f15c40625064732545a53b7b884e3c1e920408cda2daba817502a22->enter($__internal_79842b2e5f15c40625064732545a53b7b884e3c1e920408cda2daba817502a22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KPPlatformBundle::sessions.html.twig"));
+        $__internal_7102af259ec73f41e464d02538513dd93edb3e23ca62e03d06cb07fc8622e76a = $this->env->getExtension("native_profiler");
+        $__internal_7102af259ec73f41e464d02538513dd93edb3e23ca62e03d06cb07fc8622e76a->enter($__internal_7102af259ec73f41e464d02538513dd93edb3e23ca62e03d06cb07fc8622e76a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KPPlatformBundle::sessions.html.twig"));
 
-        // line 1
-        echo "<h3>Entrez vos Sessions</h3>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_7102af259ec73f41e464d02538513dd93edb3e23ca62e03d06cb07fc8622e76a->leave($__internal_7102af259ec73f41e464d02538513dd93edb3e23ca62e03d06cb07fc8622e76a_prof);
 
+    }
+
+    // line 3
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_300010f2c5695f4c022c5a874a825646f2709796ab5c1572cec95e3c006368cc = $this->env->getExtension("native_profiler");
+        $__internal_300010f2c5695f4c022c5a874a825646f2709796ab5c1572cec95e3c006368cc->enter($__internal_300010f2c5695f4c022c5a874a825646f2709796ab5c1572cec95e3c006368cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 4
+        echo "    ";
+        $this->displayParentBlock("body", $context, $blocks);
+        echo "
+    <h3>Entrez vos Sessions</h3>
+
+
+    ";
+        // line 8
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        echo "
 
 ";
-        // line 4
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         
-        $__internal_79842b2e5f15c40625064732545a53b7b884e3c1e920408cda2daba817502a22->leave($__internal_79842b2e5f15c40625064732545a53b7b884e3c1e920408cda2daba817502a22_prof);
+        $__internal_300010f2c5695f4c022c5a874a825646f2709796ab5c1572cec95e3c006368cc->leave($__internal_300010f2c5695f4c022c5a874a825646f2709796ab5c1572cec95e3c006368cc_prof);
 
     }
 
@@ -42,10 +66,16 @@ class __TwigTemplate_cac900c5ebd08329594d46ced601b8475d5a11c2654849a337ce22c0366
 
     public function getDebugInfo()
     {
-        return array (  27 => 4,  22 => 1,);
+        return array (  48 => 8,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* <h3>Entrez vos Sessions</h3>*/
+/* {% extends "KPPlatformBundle::index.html.twig" %}*/
+/* */
+/* {% block body %}*/
+/*     {{ parent() }}*/
+/*     <h3>Entrez vos Sessions</h3>*/
 /* */
 /* */
-/* {{ form(form) }}*/
+/*     {{ form(form) }}*/
+/* */
+/* {% endblock %}*/

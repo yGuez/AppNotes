@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset("bundles/framework/css/styles.css")}}">
+
+</head>
+<body>
+
+{% block body %}
+    <ul class="menu">
+        <li><a href="{{ path('platform_enseignants_show_list') }}">Enseignants</a></li>
+        <li><a href="{{ path('platform_etudiants_show_list') }}">Etudiants</a></li>
+        <li><a href="{{ path('platform_sessions_show_list') }}">Sessions</a></li>
+    </ul>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

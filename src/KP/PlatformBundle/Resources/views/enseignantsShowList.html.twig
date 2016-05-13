@@ -1,3 +1,9 @@
+{% extends "KPPlatformBundle::index.html.twig" %}
+
+
+{% block body %}
+    {{ parent() }}
+
 {% if app.session.flashBag.has('success') %}
     <div class="alert alert-success">
         {% for msg in app.session.flashBag.get('success') %}
@@ -12,3 +18,5 @@
         {{ enseignant.nom }} {{ enseignant.prenom }}<br />
     {% endfor %}
 </p>
+
+{% endblock %}

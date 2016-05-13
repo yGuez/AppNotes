@@ -1,6 +1,12 @@
+{% extends "KPPlatformBundle::index.html.twig" %}
 
-
-<h3>Entrez vos Enseignants</h3>
+{% block body %}
+    {{ parent() }}
+    <h3>Entrez vos Enseignants</h3>
 
 
     {{ form(form) }}
+
+{% endblock %}
+
+

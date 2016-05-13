@@ -1,14 +1,20 @@
-{% if app.session.flashBag.has('success') %}
-    <div class="alert alert-success">
-        {% for msg in app.session.flashBag.get('success') %}
-            {{ msg }}
-        {% endfor %}
-    </div>
-{% endif %}
+{% extends "KPPlatformBundle::index.html.twig" %}
 
-<p><a href="{{ path('platform_sessions_add') }}">Ajouter une session</a></p>
-<p>
-    {% for session in sessions %}
-        <p>{{ session.titre }} du {{ session.dateDebut | date('d/m/Y') }} au {{ session.dateFin | date('d/m/Y') }}</p>
-    {% endfor %}
-</p>
+
+{% block body %}
+    {{ parent() }}
+    {% if app.session.flashBag.has('success') %}
+        <div class="alert alert-success">
+            {% for msg in app.session.flashBag.get('success') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <p><a href="{{ path('platform_sessions_add') }}">Ajouter une session</a></p>
+    <p>
+        {% for session in sessions %}
+            <p>{{ session.titre }} du {{ session.dateDebut | date('d/m/Y') }} au {{ session.dateFin | date('d/m/Y') }}</p>
+        {% endfor %}
+    </p>
+{% endblock %}
