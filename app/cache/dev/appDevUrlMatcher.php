@@ -105,21 +105,45 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/platform/enseignant')) {
-            // platform_enseignants_add
-            if ($pathinfo === '/platform/enseignant/add') {
-                return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::addAction',  '_route' => 'platform_enseignants_add',);
-            }
-
-            if (0 === strpos($pathinfo, '/platform/enseignant/show')) {
-                // platform_enseignants_show_list
-                if ($pathinfo === '/platform/enseignant/show') {
-                    return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showListAction',  '_route' => 'platform_enseignants_show_list',);
+        if (0 === strpos($pathinfo, '/platform/e')) {
+            if (0 === strpos($pathinfo, '/platform/enseignant')) {
+                // platform_enseignants_add
+                if ($pathinfo === '/platform/enseignant/add') {
+                    return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::addAction',  '_route' => 'platform_enseignants_add',);
                 }
 
-                // platform_enseignants_show
-                if (preg_match('#^/platform/enseignant/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'platform_enseignants_show')), array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showAction',));
+                if (0 === strpos($pathinfo, '/platform/enseignant/show')) {
+                    // platform_enseignants_show_list
+                    if ($pathinfo === '/platform/enseignant/show') {
+                        return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showListAction',  '_route' => 'platform_enseignants_show_list',);
+                    }
+
+                    // platform_enseignants_show
+                    if (preg_match('#^/platform/enseignant/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'platform_enseignants_show')), array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EnseignantController::showAction',));
+                    }
+
+                }
+
+            }
+
+            if (0 === strpos($pathinfo, '/platform/etudiant')) {
+                // platform_etudiants_add
+                if ($pathinfo === '/platform/etudiant/add') {
+                    return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EtudiantController::addAction',  '_route' => 'platform_etudiants_add',);
+                }
+
+                if (0 === strpos($pathinfo, '/platform/etudiant/show')) {
+                    // platform_etudiants_show_list
+                    if ($pathinfo === '/platform/etudiant/show') {
+                        return array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EtudiantController::showListAction',  '_route' => 'platform_etudiants_show_list',);
+                    }
+
+                    // platform_etudiants_show
+                    if (preg_match('#^/platform/etudiant/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'platform_etudiants_show')), array (  '_controller' => 'KP\\PlatformBundle\\Controller\\EtudiantController::showAction',));
+                    }
+
                 }
 
             }
