@@ -18,6 +18,7 @@ class SessionType extends AbstractType
             ->add('titre')
             ->add('dateDebut', 'datetime')
             ->add('dateFin', 'datetime')
+            ->add('save', 'submit')
         ;
     }
     

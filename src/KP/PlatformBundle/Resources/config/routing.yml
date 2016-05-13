@@ -24,3 +24,14 @@ platform_etudiants_show:
     path:    etudiant/show/{id}
     defaults: { _controller: KPPlatformBundle:Etudiant:show }
 
+platform_sessions_add:
+    path:    /session/add
+    defaults: { _controller: KPPlatformBundle:Session:add }
+
+platform_sessions_show_list:
+    path:    /session/show
+    defaults: { _controller: KPPlatformBundle:Session:showList }
+
+platform_sessions_show:
+    path:    session/show/{id}
+    defaults: { _controller: KPPlatformBundle:Session:show }
